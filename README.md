@@ -6,11 +6,33 @@ Telegram Private Message Chat Bot
 **⚠⚠⚠本项目已进入随缘更新状态，如您对使用 `.NET` 没有意见的话，可考虑使用 [pmcenter](https://github.com/Elepover/pmcenter) 作为PM机器人的解决方案**  
 **⚠⚠⚠Warning: This bot is no longer under maintenance. You are better off with other solutions.**
 
+## 部署
+
 ```shell
 git clone https://github.com/Jv0id/TelegramBotReaderBook.git
 vi config.json
 docker build -t myapp:v1 .
 docker run -d --name telegram_pm_bot --restart always myapp:v1
+```
+### config.json
+
+```json
+{
+    "Admin": 123123,
+    "Lang": "zh",
+    "Token": "123123:AAHdTBF84Mzd5ko_JSEE_wmiwRHRrzl21X0",
+    "Username": "@pm_hahahhahaah_bot",
+    "ID": 1965556062
+}
+```
+### 参数说明
+
+```shell
+# Admin: 管理员id
+# lang: 语言，默认zh，可选 en, id, zh, zh_moe1
+# token: bot token
+# username: bot名，需要加@
+# ID: bot的id 
 ```
 
 ## 使用 (Usage)
