@@ -6,50 +6,11 @@ Telegram Private Message Chat Bot
 **⚠⚠⚠本项目已进入随缘更新状态，如您对使用 `.NET` 没有意见的话，可考虑使用 [pmcenter](https://github.com/Elepover/pmcenter) 作为PM机器人的解决方案**  
 **⚠⚠⚠Warning: This bot is no longer under maintenance. You are better off with other solutions.**
 
-## 安装 (Installation)
-
-### 安装准备 (Preparation)
-* 创建Telegram机器人，获取Token
-* 一台外面的服务器，安装好Python和pip，并用pip安装`python-telegram-bot==11.1.0`
-
-* Create a bot and get its token
-* Install Python and pip, then use pip to install `python-telegram-bot==11.1.0`
-
-### 配置 (Configuration)
-打开`config.json`并配置
-```json
-{
-    "Admin": 0,
-    "//1": "管理员用户ID（数字ID）（可以先不设）",
-    "Token": "",
-    "//2": "机器人Token",
-    "Lang": "zh",
-    "//3": "语言包名称"
-}
-```
-如果在前一步未设置管理员用户ID，第一个对机器人发送`/setadmin`的用户将成为管理员，之后可通过修改`config.json`修改管理员
-
-Open `config.json` and configure
-```json
-{
-    "Admin": 0,
-    "//1": "Admin ID (A digital ID)",
-    "Token": "",
-    "//2": "Bot Token",
-    "Lang": "en",
-    "//3": "Language Pack Name (Be careful! It's 'en'!)"
-}
-```
-If you didn't set admin's ID previously, the user who sends `/setadmin` to the bot first will become the admin. You can edit `config.json` to change admin later.
-
-## 升级 (Upgrade)
-替换`main.py`和`lang`文件夹，重新运行即可
-
-Replace `main.py` and folder `lang`, then run `main.py`
-
-## 运行 (Run)
-```
-python main.py
+```shell
+git clone https://github.com/Jv0id/TelegramBotReaderBook.git
+vi config.json
+docker build -t myapp:v1 .
+docker run -d --name telegram_pm_bot --restart always myapp:v1
 ```
 
 ## 使用 (Usage)
