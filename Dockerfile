@@ -1,4 +1,4 @@
-FROM python:2.7.5 as builder
+FROM python:3.7.9 as builder
 
 RUN apt-get update && apt-get install tzdata
 
@@ -8,6 +8,6 @@ ENV TZ=Asia/Shanghai
 
 WORKDIR /telegram-pm-chat-bot
 
-RUN pip install -r /telegram-pm-chat-bot/requirements.txt
+RUN pip3 install -r /telegram-pm-chat-bot/requirements.txt
 
-CMD ["python", "main.py"]
+CMD ["python3", "main.py"]
